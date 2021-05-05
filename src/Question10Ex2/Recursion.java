@@ -19,18 +19,23 @@ public class Recursion {
         System.out.println("Answer to Question10Ex2: Tejaswi Reddy Nallavolu");
 int n,key=9;
       int a[]={1,4,7,9,10};     
-      for (n= 0; n < a.length; n++)
-      {
-         if (a[n] == key) 
-         {
-           System.out.println(key+" is present at location "+(n+1));
-           break;
-         }
-      }
-      if (n== a.length)
-        System.out.println(key + " doesn't exist in array.");
+        recSearch(a, 0, a.length-1, key);
    }
 
+    public static void recSearch(int[] a, int startIndex, int len, int key) {
+        
+     if (startIndex == len){
+        System.out.println(key + " doesn't exist in array.");   
+     }
+     else{
+         if (a[startIndex] == key) 
+         {
+           System.out.println(key+" is present at location "+(startIndex+1));
+          
+         }
+         else{
+             recSearch(a, startIndex+1, len, key);
+         }
+    }
+    }
 }
-
-    

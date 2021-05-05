@@ -23,7 +23,7 @@ public class Exceptions1 {
         System.out.println("Answer for Question8Ex1: Tejaswi Reddy Nallavolu");
         try {
             // TODO code application logic here
-            Scanner scan = new Scanner(new File("input.txt"));
+            Scanner scan = new Scanner(new File("input1.txt"));
         } 
         catch (FileNotFoundException Ex) {
             System.out.println("this is a File not found exception");
